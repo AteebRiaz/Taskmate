@@ -1,0 +1,27 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+/* Icons */
+.fa-trash,
+.fa-check,
+.edit-icon,
+.delete-icon {
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.fa-trash,
+.fa-check {
+  color: #e74c3c;
+}
+.delete-icon {
+  color: #e74c3c;
+}
+.edit-icon
+ {
+  color: #3498db;
+}
+
+.completed-card {
+  background-color: #d4edda; /* Green background color for completed tasks */
+}

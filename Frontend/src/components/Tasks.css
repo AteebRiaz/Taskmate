@@ -1,0 +1,9 @@
+/* Tasks.css */
+.card {
+    background-color: #60c979; /* Green background color for toggled cards */
+  }
+  
+  .toggle-color-button {
+    margin-top: 5px;
+  }
+  
