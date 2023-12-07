@@ -4,9 +4,9 @@
 Follow these steps to run the TaskMate application locally:
 
 #### Prerequisites
-1. **Node.js and npm:** Ensure that Node.js and npm are installed on your machine. You can download them from [here](https://nodejs.org/).
+1. **Node.js and npm:** Ensure that Node.js and npm are installed on your machine. 
 
-2. **MongoDB:** Make sure MongoDB is installed and running. You can download MongoDB from [here](https://www.mongodb.com/try/download/community).
+2. **MongoDB:** Make sure MongoDB is installed and running. and update address of your local machine in backend code
 
 #### Steps
 
