@@ -66,4 +66,23 @@ router.delete("/:taskId", async (req, res) => {
   }
 });
 
+// Update the completion status of a task
+router.patch("/:taskId", async (req, res) => {
+  try {
+    const taskId = req.params.taskId;
+    const { completed } = req.body;
+
+    const updatedTask = await Task.findByIdAndUpdate(
+      taskId,
+      { completed },
+      { new: true }
+    );
+
+    res.status(200).send(updatedTask);
+  } catch (error) {
+    console.error(error);
+    res.status(500).send({ error: 'Internal Server Error' });
+  }
+});
+
 module.exports = router;

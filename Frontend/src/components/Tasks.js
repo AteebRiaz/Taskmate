@@ -48,18 +48,28 @@ const Tasks = () => {
     }
   };
 
+
+
   const toggleCardStatus = async (taskId) => {
     try {
+      const taskToUpdate = tasks.find((task) => task._id === taskId);
       const updatedTasks = tasks.map((task) =>
         task._id === taskId ? { ...task, completed: !task.completed } : task
       );
       setTasks(updatedTasks);
-      await axios.patch(`http://localhost:5000/task/${taskId}`, { completed: !tasks.find(task => task._id === taskId).completed });
+  
+      // Send the update to the server
+      await axios.patch(`http://localhost:5000/task/${taskId}`, { completed: !taskToUpdate.completed }, {
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
     } catch (error) {
       console.error('Error toggling task status:', error);
     }
   };
-  
+
+
 
   return (
     <div className="container">
